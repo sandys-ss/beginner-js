@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Javascript</title>
+</head>
+
+<body>
+  <div class="container mx-auto bg-gray-500 m-32">
+    <div class="p-16 text-center space-y-8 text-white">
+      <h1 class="text-6xl">This is my website!</h1>
+      <button class="py-4 px-8 bg-blue-700 rounded-lg shadow-lg" onclick="changeText()">
+        <a href="#">Change The Text</a>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- <script type="module" src="/main.js"></script> -->
+  <script>
+    const header = document.querySelector('h1');
+
+    function changeText() {
+      header.innerText = "my new text!";
+    }
+  </script>
+</body>
+
 </html>
