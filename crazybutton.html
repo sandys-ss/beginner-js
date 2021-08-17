@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <link rel="icon" type="image/svg+xml" href="favicon.svg" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css">
+  <title>Javascript</title>
+</head>
+
+<body>
+
+  <!-- <div class="container mx-auto p-32"> -->
+  <div class="absolute left-1/2 top-1/2 btn-crazy">
+    <button type="button" class="px-5 py-4 bg-red-600 text-white rounded-lg">
+      Click Me!
+    </button>
+  </div>
+  <!-- </div> -->
+
+  <!-- <script type="module" src="/main.js"></script> -->
+  <script>
+    //grab everything we need
+    //const crazyButtons = document.querySelectorAll('.btn-crazy');
+    const crazyButtons = document.querySelector('.btn-crazy');
+
+    //define our functions
+    function goCrazy() {
+      //get random number for left offset
+      //get random num for top offset
+      const offsetLeft = Math.random() * (window.innerWidth - crazyButtons.clientWidth);
+      const offsetTop = Math.random() * (window.innerHeight - crazyButtons.clientHeight);
+
+      console.log(offsetLeft, offsetTop);
+
+      //apply those numbers to the button
+      crazyButtons.style.top = offsetTop + 'px';
+      crazyButtons.style.left = offsetLeft + 'px';
+
+      //document.querySelector('.btn-crazy').style.left = "100px";
+    }
+
+    //add event listeners
+    //crazyButtons.forEach(button => button.addEventListener('mouseenter', goCrazy));
+    crazyButtons.addEventListener('mouseenter', goCrazy);
+
+  </script>
+</body>
+
+</html>
